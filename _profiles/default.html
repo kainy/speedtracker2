@@ -3,7 +3,7 @@
 # The human-friendly name of the profile. Whenever you're asked for the profile
 # ID, it refers to the name of the profile file — in this case, "default".
 #
-name: "vPoster"
+name: "微海报"
 
 #
 # The default profile will be the one shown when accessing the root URL of your
@@ -16,7 +16,7 @@ default: true
 # with a minimum value of 12, as only two scheduled tests per day are allowed.
 # To disabled repeated tests, simply remove this property from the profile.
 #
-interval: 12
+interval: 1
 
 #
 # WebPageTest test parameters.
@@ -25,7 +25,9 @@ interval: 12
 # https://www.npmjs.com/package/webpagetest
 #
 parameters:
-  connectivity: "Cable"
+connectivity: '3G'
+video: true
+connectivity: "Cable"
   location: "HongKong:Chrome"
   runs: 1
   url: "https://b.pingan.com.cn/static/act/koudai/qr_poster/index.shtml?debug=1"
