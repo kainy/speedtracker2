@@ -1,0 +1,19 @@
+---
+default: false
+name: '天天有料（3G）'
+parameters:
+  connectivity: '3G'
+  location: 'HongKong:Chrome'
+  runs: 1
+  url: "https://eduardoboucas.com"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 600
+    alerts: ["emailAlert", "slackAlert"]
+  -
+    metric: firstPaint
+    max: 2000
+    alerts: ["slackAlert"]
+---
