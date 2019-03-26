@@ -1,0 +1,20 @@
+---
+default: false
+interval: 6
+name: 'ec2-sa-east-1:ChromeCanary'
+parameters:
+  connectivity: 'LTE'
+  location: 'ec2-sa-east-1:ChromeCanary'
+  runs: 4
+  url: "https://blogs.kainy.cn/"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 900
+    alerts: ["emailAlert"]
+  -
+    metric: firstPaint
+    max: 2000
+    alerts: ["emailAlert"]
+---
