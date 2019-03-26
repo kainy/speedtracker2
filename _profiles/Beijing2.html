@@ -1,20 +1,20 @@
 ---
 default: false
+name: 'Beijing, China (Firefox)'
 interval: 6
-name: 'HK:blogs.kainy.cn'
 parameters:
-  connectivity: 'Cable'
-  location: 'HongKong:ChromeCanary'
+  connectivity: 'LTE'
+  location: 'Beijing2'
   runs: 1
   url: "https://blogs.kainy.cn/"
   video: true
 budgets:
   -
     metric: TTFB
-    max: 600
-    alerts: ["emailAlert", "slackAlert"]
+    max: 900
+    alerts: ["emailAlert"]
   -
     metric: firstPaint
     max: 2000
-    alerts: ["slackAlert"]
+    alerts: ["emailAlert"]
 ---
